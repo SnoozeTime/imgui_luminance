@@ -1,5 +1,5 @@
 use imgui::{DrawData, FontAtlasTexture, DrawVert, DrawCmd, DrawCmdParams, Textures, TextureId, Io};
-use luminance_glfw::{GlfwSurface, Key, WindowEvent, Action, MouseButton};
+use luminance_glfw::{Key, WindowEvent, Action, MouseButton, GlfwSurface};
 use luminance_windowing::Surface;
 use luminance::texture::{Sampler, Texture, Dim2, GenMipmaps, MagFilter, MinFilter};
 use luminance::pixel::{NormRGBA8UI, NormUnsigned};
