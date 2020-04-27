@@ -231,29 +231,28 @@ impl Renderer {
         io.font_global_scale = 1.0;
         io.display_size = [surface.size()[0] as f32, surface.size()[1] as f32];
         println!("IO DISPLAY SIZE = {:?}", io.display_size);
-        io[imgui::Key::Tab] = Key::Tab as _;
-        io[imgui::Key::LeftArrow] = Key::Left as _;
-        io[imgui::Key::RightArrow] = Key::Right as _;
-        io[imgui::Key::UpArrow] = Key::Up as _;
-        io[imgui::Key::DownArrow] = Key::Down as _;
-        io[imgui::Key::PageUp] = Key::PageUp as _;
-        io[imgui::Key::PageDown] = Key::PageDown as _;
-        io[imgui::Key::Home] = Key::Home as _;
-        io[imgui::Key::End] = Key::End as _;
-        io[imgui::Key::Insert] = Key::Insert as _;
-        io[imgui::Key::Delete] = Key::Delete as _;
-        io[imgui::Key::Backspace] = Key::Backspace as _;
-        io[imgui::Key::Space] = Key::Space as _;
-        io[imgui::Key::Enter] = Key::Enter as _;
-        io[imgui::Key::Escape] = Key::Escape as _;
-        io[imgui::Key::KeyPadEnter] = Key::KpEnter as _;
-        io[imgui::Key::A] = Key::A as _;
-        io[imgui::Key::C] = Key::C as _;
-        io[imgui::Key::V] = Key::V as _;
-        io[imgui::Key::X] = Key::X as _;
-        io[imgui::Key::Y] = Key::Y as _;
-        io[imgui::Key::Z] = Key::Z as _;
-
+        io[imgui::Key::Tab] = Key::Tab.get_scancode().unwrap() as _;
+        io[imgui::Key::LeftArrow] = Key::Left.get_scancode().unwrap() as _;
+        io[imgui::Key::RightArrow] = Key::Right.get_scancode().unwrap() as _;
+        io[imgui::Key::UpArrow] = Key::Up.get_scancode().unwrap() as _;
+        io[imgui::Key::DownArrow] = Key::Down.get_scancode().unwrap() as _;
+        io[imgui::Key::PageUp] = Key::PageUp.get_scancode().unwrap() as _;
+        io[imgui::Key::PageDown] = Key::PageDown.get_scancode().unwrap() as _;
+        io[imgui::Key::Home] = Key::Home.get_scancode().unwrap() as _;
+        io[imgui::Key::End] = Key::End.get_scancode().unwrap() as _;
+        io[imgui::Key::Insert] = Key::Insert.get_scancode().unwrap() as _;
+        io[imgui::Key::Delete] = Key::Delete.get_scancode().unwrap() as _;
+        io[imgui::Key::Backspace] = Key::Backspace.get_scancode().unwrap() as _;
+        io[imgui::Key::Space] = Key::Space.get_scancode().unwrap() as _;
+        io[imgui::Key::Enter] = Key::Enter.get_scancode().unwrap() as _;
+        io[imgui::Key::Escape] = Key::Escape.get_scancode().unwrap() as _;
+        io[imgui::Key::KeyPadEnter] = Key::KpEnter.get_scancode().unwrap() as _;
+        io[imgui::Key::A] = Key::A.get_scancode().unwrap() as _;
+        io[imgui::Key::C] = Key::C.get_scancode().unwrap() as _;
+        io[imgui::Key::V] = Key::V.get_scancode().unwrap() as _;
+        io[imgui::Key::X] = Key::X.get_scancode().unwrap() as _;
+        io[imgui::Key::Y] = Key::Y.get_scancode().unwrap() as _;
+        io[imgui::Key::Z] = Key::Z.get_scancode().unwrap() as _;
     }
 
     fn upload_texture(surface:&mut GlfwSurface, font: FontAtlasTexture) -> Texture<Dim2, NormRGBA8UI> {
