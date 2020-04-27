@@ -25,3 +25,11 @@ surface.pipeline_builder().pipeline(&back_buffer, &PipelineState::default(), |pi
 ```
 
 The full example can be found [here](./examples/demo.rs).
+
+## What's left?
+
+The renderer might not be bug-free. I am using it on a different project so I'll fix any issues I find.
+Don't hesitate to add tickets if something is wrong.
+
+I will also update to the newest version of luminance when it is released so it should become
+backend agnostic at that moment.
